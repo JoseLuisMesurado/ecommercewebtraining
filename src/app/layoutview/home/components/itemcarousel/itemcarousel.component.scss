@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  background-color: #ffe4c44d;
+}
+
+.card {
+  background: var(--surface-card);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: #ffe4c44d;
+}
+
+
+::ng-deep {
+  .carousel-item-style {
+    background-color: #f3f4f6;
+  }
+
+  .carousel-image {
+    height: 130px;
+  }
+}
+
+::ng-deep p-tag {
+  .p-element {
+    border-radius: 10px;
+  }
+}

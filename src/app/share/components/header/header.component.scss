@@ -1,0 +1,59 @@
+.header-container {
+  width: 100%;
+  background-color: #ffe4c44d;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: baseline;
+  gap: 10px;
+
+
+  .logo-container {
+    font-size: 24px;
+    font-weight: bold;
+    padding-right: 100px;
+    padding-left: 100px;
+    align-self: center;
+
+    .site-logo {
+      padding: 3px;
+
+      img {
+        max-height: 64px;
+      }
+    }
+  }
+
+  .search-container {
+    flex: 2;
+    align-self: center;
+  }
+
+  .header-button-container {
+    flex: 1;
+    align-self: center;
+  }
+}
+
+.header-height {
+  height: 65px;
+}
+
+.spacer {
+  flex: 0.2;
+}
+
+::ng-deep {
+
+  // .p-button,
+  .search-btn-color button {
+    background-color: #987906 !important;
+    color: #fff;
+    border-bottom: 1px solid #987906;
+    border-color: #987906;
+    border-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+  }
+}

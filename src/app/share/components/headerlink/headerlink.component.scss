@@ -1,0 +1,22 @@
+.container-headerlink {
+  width: 100%;
+  height: 38px;
+  flex-direction: row;
+}
+
+.link-bar-style {
+  border: 0px;
+}
+
+::ng-deep {
+  .p-menubar {
+    height: 38px;
+    border-radius: 0px;
+    border: 0px;
+  }
+
+  .p-menuitem-content:hover {
+    background-color: #c8ba86;
+    color: #ffffff;
+  }
+}

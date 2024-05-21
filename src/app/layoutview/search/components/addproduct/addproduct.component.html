@@ -1,0 +1,33 @@
+<div class="add-product-container">
+  <div class="panel-container">
+    <div pFocusTrap class="card flex  flex-wrap gap-5">
+      <p-floatLabel>
+        <input pInputText id="productname" [(ngModel)]="productname" />
+        <label for="productname">Product Name</label>
+      </p-floatLabel>
+      <p-floatLabel>
+        <input pInputText id="productdescription" [(ngModel)]="productdescription" />
+        <label for="productdescription">Product Description</label>
+      </p-floatLabel>
+      <p-floatLabel>
+        <p-inputNumber [(ngModel)]="price" mode="currency" inputId="currency-germany" currency="USS" locale="de-DE" />
+        <label for="price">Price</label>
+      </p-floatLabel>
+      <p-floatLabel>
+        <p-inputNumber [(ngModel)]="stock" inputId="minmax" mode="decimal" [min]="0" [max]="1000" />
+        <label for="stock">Stock</label>
+      </p-floatLabel>
+      <p-floatLabel>
+        <input pInputText id="thumbnail" [(ngModel)]="productthumbnail" />
+        <label for="thumbnail">Thumbnail</label>
+      </p-floatLabel>
+      <div class="card flex justify-content-center">
+        <p-autoComplete [(ngModel)]="selectedcategory" [dropdown]="true" [suggestions]="filteredCategories || []"
+          (completeMethod)="filterCategory($event)" field="name" />
+      </div>
+      <div>
+        <p-button label="Save" (onClick)="saveproduct()" />
+      </div>
+    </div>
+  </div>
+</div>

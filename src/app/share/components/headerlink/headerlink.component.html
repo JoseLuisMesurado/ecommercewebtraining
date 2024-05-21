@@ -1,0 +1,18 @@
+<div class="header-link-container" style="display: flex; justify-content: center;">
+  <p-menubar [model]="items" class="link-bar-style">
+    <ng-template pTemplate="item" let-item>
+      <ng-container *ngIf="item.route; else elseBlock">
+        <a [routerLink]="item.route" class="p-menuitem-link" [target]="item.target">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+      </ng-container>
+      <ng-template #elseBlock>
+        <a [href]="item.url" class="p-menuitem-link" [target]="item.target">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+      </ng-template>
+    </ng-template>
+  </p-menubar>
+</div>
